@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<display-name></display-name>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>controller.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>CateAddServlet</servlet-name>
+		<servlet-class>controller.CateAddServlet</servlet-class>
+	</servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CateMgShowServlet</servlet-name>
+    <servlet-class>controller.CateMgShowServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CateMgShowServlet2</servlet-name>
+    <servlet-class>controller.CateMgShowServlet2</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CateMgDeleteServlet</servlet-name>
+    <servlet-class>controller.CateMgDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CateMgDeleteAllServlet</servlet-name>
+    <servlet-class>controller.CateMgDeleteAllServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>NewsAddServlet</servlet-name>
+    <servlet-class>controller.NewsAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewsMgServlet</servlet-name>
+    <servlet-class>controller.NewsMgServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewsDeleteServlet</servlet-name>
+    <servlet-class>controller.NewsDeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>NewsDeleteAllServlet</servlet-name>
+    <servlet-class>controller.NewsDeleteAllServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>NewsModifyServlet</servlet-name>
+    <servlet-class>controller.NewsModifyServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>CateModifyServlet</servlet-name>
+    <servlet-class>controller.CateModifyServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CateAddServlet</servlet-name>
+		<url-pattern>/CateAddServlet</url-pattern>
+	</servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CateMgShowServlet</servlet-name>
+    <url-pattern>/CateMgShowServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CateMgShowServlet2</servlet-name>
+    <url-pattern>/CateMgShowServlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CateMgDeleteServlet</servlet-name>
+    <url-pattern>/CateMgDeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CateMgDeleteAllServlet</servlet-name>
+    <url-pattern>/CateMgDeleteAllServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsAddServlet</servlet-name>
+    <url-pattern>/NewsAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsMgServlet</servlet-name>
+    <url-pattern>/NewsMgServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsDeleteServlet</servlet-name>
+    <url-pattern>/NewsDeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsDeleteAllServlet</servlet-name>
+    <url-pattern>/NewsDeleteAllServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>NewsModifyServlet</servlet-name>
+    <url-pattern>/NewsModifyServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CateModifyServlet</servlet-name>
+    <url-pattern>/CateModifyServlet</url-pattern>
+  </servlet-mapping>
+
+	<filter>
+		<filter-name>CharacterFilter</filter-name>
+		<filter-class>filter.CharacterFilter</filter-class>
+		<init-param>
+			<param-name>character</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>CharacterFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>/manager/*</url-pattern>
+	</filter-mapping>
+	<welcome-file-list>
+		<welcome-file>Login.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
